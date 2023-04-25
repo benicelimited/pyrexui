@@ -1,0 +1,162 @@
+@media (max-width:1200px) {
+ .container {
+  width:100%;
+ }
+}
+
+@media (max-width:1100px) {
+.navbar-brand {
+  width: 23%;
+}
+.widthleft{
+	width: 85px;
+}
+.card-body p{
+	padding-right: 0;
+}
+}
+
+@media (max-width:1000px) {
+	
+ .out_partners {
+  width: 100%;
+  text-align: center;
+}
+
+.out_partners img{
+	width:30%;
+}
+
+.navbar-brand {
+  width: 20%;
+}
+.navbar-nav{
+	  width: 70%;
+}
+.baners_img {
+  margin-top: 2em;
+}
+}
+
+@media (max-width:900px) {
+.navbar-brand {
+  width: auto;
+}
+}
+ 
+
+@media (max-width:767px) {
+	.air_feat {
+  width: 100%;
+  padding-top: 15px;
+}
+#features .card-body{
+display:block !important;
+}	
+#footer .footer-top .footer-links ul li{
+	padding-top: 15px !important;
+}
+
+#footer .footer-top .footer-links ul {
+	display:block !important;
+}
+
+#home h2  , #faq h2{
+font-size: 30px
+}
+ 
+.wid-auto {
+  width: 100%;
+}
+
+.right {
+  float: left;
+}
+
+.faqs-dd .card-title.collapsed {
+	font-size: 15px;
+}
+
+.faqs-dd .card-body {
+	 font-size: 15px;
+}
+
+.skew1 , .skew2{
+  transform: none;
+  margin-bottom: 1em;
+}
+	
+.lead{
+	font-size: 15px
+}
+
+#features{
+	position: relative;
+z-index: 9;
+}
+
+#features .headings{
+	font-size: 26px;
+}
+
+.navigation.sidebar-left .collapse
+{
+	border-right: 1px solid #101421;
+background-color: #101421;
+}
+
+	.dash_right{
+		padding-left: 10px;
+	}
+	
+	.shape1 , .shape2 , .shape3, .shape4 , .shape5 {
+		display:none;
+	}
+	
+	#main-navbar{
+	display:none;
+}
+.navigation
+{
+	min-height: 60px;
+}
+.shape6 , .shape7 , .shape3 {
+display:none;	
+}
+
+.social-links{
+	visibility:visible !important;
+	margin-bottom:2em;
+}
+
+.integration-bubbles .section-heading , #success1 .section-heading{
+	border:none;
+}
+
+#success1 .section-heading
+{
+	padding-left: 0;
+}
+
+#features .shadow{
+	min-height:auto !important;
+	padding: 15px 10px;
+}
+
+#success1 .section-heading{
+	text-align:left;
+}
+}
+
+@media (max-width:767px) {
+	.out_partners .flex{		
+		display:block;
+	}
+	
+	.out_partners img{
+		width: 100%;
+		margin-bottom:1em;
+	}
+	
+}
+
