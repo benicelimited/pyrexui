@@ -6802,8 +6802,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 	font-style: normal;
 	font-weight: 400;
 	font-display: auto;
-	src: url(./font-awesome/webfonts/fa-brands-400.ttf);
-	src: url(./font-awesome/webfonts/fa-brands-400.woff2) format("woff2"), url(./font-awesome/webfonts/fa-brands-400.ttf) format("truetype")
+	src: url(./webfonts/fa-brands-400.ttf);
+	src: url(./webfonts/fa-brands-400.woff2) format("woff2"), url(./webfonts/fa-brands-400.ttf) format("truetype")
 }
 
 .fab {
@@ -6815,7 +6815,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 	font-style: normal;
 	font-weight: 400;
 	font-display: auto;
-	src: url(./font-awesome/webfonts/fa-regular-400.woff2) format("woff2"), url(./font-awesome/webfonts/fa-regular-400.woff2) format("woff2"), url(./font-awesome/webfonts/fa-regular-400.ttf) format("truetype"),
+	src: url(./webfonts/fa-regular-400.woff2) format("woff2"), url(./webfonts/fa-regular-400.woff2) format("woff2"), url(./webfonts/fa-regular-400.ttf) format("truetype"),
 }
 
 .far {
@@ -6829,7 +6829,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 	font-weight: 900;
 	font-display: auto;
 	
-	src: url(./font-awesome/webfonts/fa-solid-900.woff2) format("woff2"), url(./font-awesome/webfonts/fa-solid-900.woff2) format("woff2"), url(./font-awesome/webfonts/fa-solid-900.ttf) format("truetype")
+	src: url(./webfonts/fa-solid-900.woff2) format("woff2"), url(./webfonts/fa-solid-900.woff2) format("woff2"), url(./webfonts/fa-solid-900.ttf) format("truetype")
 }
 
 .fa,
@@ -6839,9 +6839,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @font-face {
-	font-family: Pe-icon-7-stroke;
-	src: url(./pixeden-stroke-7-icon/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.eot?d7yf1v);
-	src: url(./pixeden-stroke-7-icon/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.eot?#iefixd7yf1v) format('embedded-opentype'), url(./pixeden-stroke-7-icon/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.woff?d7yf1v) format('woff'), url(./pixeden-stroke-7-icon/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.ttf?d7yf1v) format('truetype'), url(./pixeden-stroke-7-icon/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.svg?d7yf1v#Pe-icon-7-stroke) format('svg');
+	font-family: "Pe-icon-7-stroke";
+	src: url(./fonts/Pe-icon-7-stroke.eot?d7yf1v);
+	src: url(./fonts/Pe-icon-7-stroke.eot?#iefixd7yf1v) format('embedded-opentype'), url(./fonts/Pe-icon-7-stroke.woff?d7yf1v) format('woff'), url(./fonts/Pe-icon-7-stroke.ttf?d7yf1v) format('truetype'), url(./fonts/Pe-icon-7-stroke.svg?d7yf1v#Pe-icon-7-stroke) format('svg');
 	font-weight: 400;
 	font-style: normal
 }
@@ -6850,7 +6850,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 [class^=pe-7s-] {
 	display: inline-block;
 	font-family: Pe-icon-7-stroke;
-	speak: none;
 	font-style: normal;
 	font-weight: 400;
 	font-variant: normal;
@@ -8043,7 +8042,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	poPoppins-events: none;
+	pointer-events: none;
 	z-index: 10
 }
 
@@ -8105,7 +8104,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .swiper-button-prev.swiper-button-disabled {
 	opacity: .35;
 	cursor: auto;
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .swiper-button-prev,
@@ -8496,7 +8495,7 @@ button.swiper-pagination-bullet {
 	position: absolute;
 	left: 0;
 	top: 0;
-	poPoppins-events: none;
+	pointer-events: none;
 	opacity: 0;
 	z-index: -1000
 }
@@ -8508,19 +8507,19 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-fade .swiper-slide {
-	poPoppins-events: none;
+	pointer-events: none;
 	-webkit-transition-property: opacity;
 	-o-transition-property: opacity;
 	transition-property: opacity
 }
 
 .swiper-container-fade .swiper-slide .swiper-slide {
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .swiper-container-fade .swiper-slide-active,
 .swiper-container-fade .swiper-slide-active .swiper-slide-active {
-	poPoppins-events: auto
+	pointer-events: auto
 }
 
 .swiper-container-cube {
@@ -8528,7 +8527,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-cube .swiper-slide {
-	poPoppins-events: none;
+	pointer-events: none;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	z-index: 1;
@@ -8541,7 +8540,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-cube .swiper-slide .swiper-slide {
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .swiper-container-cube.swiper-container-rtl .swiper-slide {
@@ -8552,14 +8551,14 @@ button.swiper-pagination-bullet {
 
 .swiper-container-cube .swiper-slide-active,
 .swiper-container-cube .swiper-slide-active .swiper-slide-active {
-	poPoppins-events: auto
+	pointer-events: auto
 }
 
 .swiper-container-cube .swiper-slide-active,
 .swiper-container-cube .swiper-slide-next,
 .swiper-container-cube .swiper-slide-next+.swiper-slide,
 .swiper-container-cube .swiper-slide-prev {
-	poPoppins-events: auto;
+	pointer-events: auto;
 	visibility: visible
 }
 
@@ -8590,19 +8589,19 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-flip .swiper-slide {
-	poPoppins-events: none;
+	pointer-events: none;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	z-index: 1
 }
 
 .swiper-container-flip .swiper-slide .swiper-slide {
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .swiper-container-flip .swiper-slide-active,
 .swiper-container-flip .swiper-slide-active .swiper-slide-active {
-	poPoppins-events: auto
+	pointer-events: auto
 }
 
 .swiper-container-flip .swiper-slide-shadow-bottom,
@@ -8685,7 +8684,7 @@ button.swiper-pagination-bullet {
 	max-height: 100%;
 	max-width: 100%;
 	width: 100%;
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .simplebar-height-auto-observer-wrapper {
@@ -8700,7 +8699,7 @@ button.swiper-pagination-bullet {
 	z-index: -1;
 	padding: 0;
 	margin: 0;
-	poPoppins-events: none;
+	pointer-events: none;
 	flex-grow: inherit;
 	flex-shrink: 0;
 	flex-basis: 0
@@ -8718,7 +8717,7 @@ button.swiper-pagination-bullet {
 	min-height: 1px;
 	min-width: 1px;
 	overflow: hidden;
-	poPoppins-events: none;
+	pointer-events: none;
 	z-index: -1
 }
 
@@ -8727,7 +8726,7 @@ button.swiper-pagination-bullet {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .simplebar-scrollbar {
@@ -11790,7 +11789,7 @@ textarea.form-control.is-invalid {
 
 a.btn.disabled,
 fieldset:disabled a.btn {
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .btn-primary {
@@ -12594,7 +12593,7 @@ fieldset:disabled a.btn {
 .btn-link.disabled,
 .btn-link:disabled {
 	color: #6c757d;
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .btn-group-lg>.btn,
@@ -12898,7 +12897,7 @@ input[type=submit].btn-block {
 .dropdown-item.disabled,
 .dropdown-item:disabled {
 	color: #6c757d;
-	poPoppins-events: none;
+	pointer-events: none;
 	background-color: transparent
 }
 
@@ -13057,7 +13056,7 @@ input[type=submit].btn-block {
 .btn-group-toggle>.btn-group>.btn input[type=radio] {
 	position: absolute;
 	clip: rect(0, 0, 0, 0);
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .input-group {
@@ -13325,7 +13324,7 @@ input[type=submit].btn-block {
 	display: block;
 	width: 1rem;
 	height: 1rem;
-	poPoppins-events: none;
+	pointer-events: none;
 	content: "";
 	background-color: #fff;
 	border: #adb5bd solid 1px
@@ -13386,7 +13385,7 @@ input[type=submit].btn-block {
 .custom-switch .custom-control-label::before {
 	left: -2.25rem;
 	width: 1.75rem;
-	poPoppins-events: all;
+	pointer-events: all;
 	border-radius: .5rem
 }
 
@@ -13762,7 +13761,7 @@ input[type=submit].btn-block {
 
 .nav-link.disabled {
 	color: #6c757d;
-	poPoppins-events: none;
+	pointer-events: none;
 	cursor: default
 }
 
@@ -14695,7 +14694,7 @@ input[type=submit].btn-block {
 
 .page-item.disabled .page-link {
 	color: #6c757d;
-	poPoppins-events: none;
+	pointer-events: none;
 	cursor: auto;
 	background-color: #fff;
 	border-color: #dee2e6
@@ -15288,7 +15287,7 @@ a.badge-contrast:focus {
 .list-group-item.disabled,
 .list-group-item:disabled {
 	color: #6c757d;
-	poPoppins-events: none;
+	pointer-events: none;
 	background-color: #fff
 }
 
@@ -15657,7 +15656,7 @@ button.close {
 }
 
 a.close.disabled {
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .toast {
@@ -15735,7 +15734,7 @@ a.close.disabled {
 	position: relative;
 	width: auto;
 	margin: .5rem;
-	poPoppins-events: none
+	pointer-events: none
 }
 
 .modal.fade .modal-dialog {
@@ -15826,7 +15825,7 @@ a.close.disabled {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	width: 100%;
-	poPoppins-events: auto;
+	pointer-events: auto;
 	background-color: #fff;
 	background-clip: padding-box;
 	border: 1px solid rgba(0, 0, 0, .2);
@@ -18309,7 +18308,7 @@ button.bg-contrast:hover {
 	bottom: 0;
 	left: 0;
 	z-index: 1;
-	poPoppins-events: auto;
+	pointer-events: auto;
 	content: "";
 	background-color: rgba(0, 0, 0, 0)
 }
@@ -28644,7 +28643,7 @@ section.shadow {
 }
 
 .isometric-mockups {
-	poPoppins-events: none;
+	pointer-events: none;
 	position: absolute;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -30275,8 +30274,10 @@ ul li,
 .faqs-dd .card-title,
 .card-body,
 #footer .footer-top .footer-links ul a,
-#footer .footer-top .footer-contact p,
-{}
+#footer .footer-top .footer-contact p {
+  /* Styles here */
+}
+
 
 
 .integration-bubbles h3 {
