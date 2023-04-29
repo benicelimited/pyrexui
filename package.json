@@ -2,6 +2,7 @@
   "name": "pyrexui",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.pyrexproxies.net/",
   "dependencies": {
     "@babel/runtime": "^7.21.0",
     "authorizenet": "^1.0.8",
