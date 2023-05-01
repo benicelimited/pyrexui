@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const DiscordAuthButton = () => {
   const CLIENT_ID = '981554056478732288';
-  const REDIRECT_URI = 'http://localhost:3000/dash'; // replace with your redirect URI
+  const REDIRECT_URI = 'https://pyrexui-benicelimited.vercel.app/dash'; // replace with your redirect URI
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(()=>{
