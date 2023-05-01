@@ -14,7 +14,7 @@ const Generate = () => {
     const id = ReactSession.get('id')
 
       try {
-        const {data} = await axios.get(`http://localhost:2005/getuserinfo?id=${id}`);
+        const {data} = await axios.get(`https://api-jrzg.onrender.com/getuserinfo?id=${id}`);
         setUserData(data.resi)
       } catch (e) {
         setError(e.message);
