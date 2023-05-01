@@ -30,7 +30,7 @@ function IspPage() {
       
       let getInfo = async ()=>{
         const id = ReactSession.get('id')
-        const {data} = await axios.get(`http://localhost:2005/getuserinfo?id=${id}`);
+        const {data} = await axios.get(`https://api-jrzg.onrender.com/getuserinfo?id=${id}`);
         setInfo(data)
       }
       getInfo()

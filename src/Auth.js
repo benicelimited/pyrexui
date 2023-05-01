@@ -51,7 +51,7 @@ const Auth = () => {
         ).email;
 
         // Send an Axios request to your backend for user details from the database
-        const response = await axios.get(`localhost:2005/users`, {
+        const response = await axios.get(`https://api-jrzg.onrender.com/users`, {
           params: { id },
         });
 

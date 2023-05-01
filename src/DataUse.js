@@ -9,7 +9,7 @@ const DataUse = () => {
       let getInfo = async ()=>{
         const id = ReactSession.get('id')
         console.log(id)
-        const {data} = await axios.get(`http://localhost:2005/getuserinfo?id=${id}`);
+        const {data} = await axios.get(`https://api-jrzg.onrender.com/getuserinfo?id=${id}`);
         setInfo(data.resi)
       }
       getInfo()

@@ -9,7 +9,7 @@ function OrderHistoryTable(page) {
     useEffect(()=>{
       let getInfo = async ()=>{
         const id = ReactSession.get('id')
-        const {data} = await axios.get(`http://localhost:2005/users?id=${id}`);
+        const {data} = await axios.get(`https://api-jrzg.onrender.com/users?id=${id}`);
         setInfo(page === 'resi' ? data.resi.orders : data.isp.orders)
       }
       getInfo()

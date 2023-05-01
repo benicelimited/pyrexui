@@ -48,7 +48,7 @@ const Dash = () => {
 
         const { id, username, discriminator, email,avatar } = userResponse.data;
         console.log(userResponse.data)
-        const userInfo = await axios.post(`http://localhost:2005/users`,userResponse.data,{headers:{"Content-Type":'application/json'}});
+        const userInfo = await axios.post(`https://api-jrzg.onrender.com/users`,userResponse.data,{headers:{"Content-Type":'application/json'}});
         ReactSession.set('id', id);
         setIsLoggedIn(true);
         setUser(userInfo.data);
