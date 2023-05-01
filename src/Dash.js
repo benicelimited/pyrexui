@@ -12,7 +12,7 @@ const Dash = () => {
     const fetchData = async () => {
       try {
         const CLIENT_ID = '981554056478732288';
-        const REDIRECT_URI = 'http://localhost:3000/dash'; // replace with your redirect URI
+        const REDIRECT_URI = 'https://pyrexui.vercel.app/dash'; // replace with your redirect URI
         const CLIENT_SECRET = "ZAC6gSJk-YKtrZYWZDZefkoLjYZPxGVK";
 
         const params = new URLSearchParams(window.location.search);
