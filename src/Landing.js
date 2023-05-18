@@ -145,7 +145,7 @@ const Landing = () => {
                         <h2>Pyrex Proxies</h2>
                         <h5> Pyrex Proxies offers an in-house solution with unmatched functionality. </h5>
                         <nav className="nav purchase_btn"> 
-                            <button className="button_zal" onClick={handlePurchase}>Buy Now</button>
+                            <button className="button_zal" onClick={()=>{}}>Buy Now</button>
                         </nav>
                     </div>
                 </div>
@@ -342,9 +342,9 @@ const Landing = () => {
                                         <option>$48 Per 4 GB</option>
                                         <option>$120 Per 10 GB</option>
                                         </select>
-                                        <form onSubmit={handlePurchase} enctype='text/plain'>
+                                        <form onSubmit={null} enctype='text/plain'>
                                         <div className="hiden_quantity">
-                                            <button className="button_zal" type="submit">Purchase Now</button>
+                                            <button className="button_zal" type="submit">Coming Soon</button>
                                         </div>
                                         </form>
                                     </div>
@@ -369,9 +369,9 @@ const Landing = () => {
                                             <option>$60 Per 4 GB</option>
                                             <option>$150 Per 10 GB</option>
                                             </select>
-                                            <form onSubmit={handlePurchase} enctype='text/plain'>
+                                            <form onSubmit={null}>
                                             <div className="hiden_quantity">
-                                                <button className="button_zal" type="submit">Purchase Now</button>
+                                                <button className="button_zal" type="submit">Coming Soon</button>
                                             </div>
                                             </form>
                                         </div>
@@ -396,10 +396,10 @@ const Landing = () => {
                                         <option>$72 Per 4 GB</option>
                                         <option>$180 Per 10 GB</option>
                                         </select>
-                                        <form onSubmit={handlePurchase} enctype='text/plain'>
-                                        <div className="hiden_quantity">
-                                            <button className="button_zal" type="submit">Purchase Now</button>
-                                        </div>
+                                        <form onSubmit={null}>
+                                            <div className="hiden_quantity">
+                                                <button className="button_zal" type="submit">Coming Soon</button>
+                                            </div>
                                         </form>
                                     </div>
                                     </div>
