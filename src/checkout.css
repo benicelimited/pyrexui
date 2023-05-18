@@ -1,0 +1,177 @@
+
+.blue-button{
+	color: #fff;
+background: #FE6E00;
+border-radius: 5px;
+width: auto;
+display: block;
+border: none;
+padding: 15px 30px;
+font-size: 15px;
+font-weight: 600;
+}
+
+.order-details .blue-button
+{
+padding: 12px 0px;
+width: 100%;
+font-size: 12px !important;
+}
+ 
+.product-image {
+	width:50px;
+border-radius: 5px;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.shash_1 {
+	display:flex;
+}
+
+.product-head {
+padding-left: 5px;
+}
+
+.product-head h5{
+	color: #fff;
+font-size: 15px;
+font-weight: 500;
+padding-top: 3px;
+}
+
+.product-head p{
+color: #757575;
+margin-top: 5px;
+font-size: 13px;
+}
+
+.check-lists {
+	border-bottom: 1px solid #262626b8;
+padding-bottom: 15px;
+margin-bottom: 15px;
+}
+
+.check-lists a{
+	color: #fe6e00;
+font-size: 14px;
+font-weight: 500;
+}
+
+.right-edits{
+	text-align: right;
+	padding-top: 11px;
+}
+
+.product-head p span{
+color: #73d0c6;
+}
+
+.width-80 {
+	width:80%;
+}
+
+.width-20{
+	width:20%;
+}
+
+.width-70 {
+	width: 65%;
+	margin-right: 10%;
+}
+
+.width-30{
+	width:30%;
+}
+
+::-moz-placeholder{
+	color:#fff;
+	opacity: 1;
+}
+
+.box-iner label{
+	color:#fff;
+	font-size:14px;
+	font-weight: 500;
+}
+
+.card-text{
+background-image: url("../img/card.png");
+background-size: 34px auto;
+background-repeat: no-repeat;
+background-position: 99% 50%;
+}
+
+.payment-img {
+	width: auto;
+	height: 20px;
+}
+
+.pay-card{
+	border: none;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 500;
+	height: 45px;
+	display: flex;
+	padding: 10px;
+	width: 100%;
+	background-color: transparent;
+	border-radius: 5px;
+	border: 2px solid #4a4a4a;
+	margin-bottom: 15px;
+}
+
+.pay-card label{
+margin-left: 10px;
+}
+
+.order-details{
+	padding: 20px;
+	border-radius: 6px;
+	background-color: #202020;
+}
+
+.order-details h5{
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.left-text {
+	color: #aaa;
+font-size: 13px;
+font-weight: 500;
+width: 50%;
+}
+
+.right-value {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	width: 50%;
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+.horizontal-line {
+	width: 100%;
+	border-bottom: 1px solid #464646;
+	height: 1px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.right-edits p{
+	color:#aaa;
+	font-size:14px;
+}
+
+.width-75 {
+	width:70%;
+}
+
+.width-25{
+	width:30%;
+}

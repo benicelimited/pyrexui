@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ResidentialPage from './ResidentialPage'
 import IspPage from './IspPage'
 import Auth from './Auth';
+import Checkout from './Checkout';
 
 function App() {
   ReactSession.setStoreType("localStorage");
@@ -17,6 +18,7 @@ function App() {
         <Route path="/dash" element={<Dash />} />
         <Route path="/resi" element={<ResidentialPage />} />
         <Route path="/isp" element={<IspPage />} />
+        <Route path='/checkout' element={<Checkout />} />
         </Routes>
       </Router>
   );

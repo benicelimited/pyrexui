@@ -1,5 +1,7 @@
 import React,{useEffect , useState} from 'react'
-import {ReactSession} from 'react-client-session'
+import {ReactSession} from 'react-client-session';
+import { useNavigate } from 'react-router-dom';
+
 import s1 from "../src/img/s1.png";
 import s2 from "../src/img/s2.png";
 import s3 from "../src/img/s3.png";
@@ -34,7 +36,7 @@ import { Link } from 'react-scroll';
 
 const Landing = () => {
     const [scrolled, setScrolled] = useState(false);
-
+    const history = useNavigate()
     const handleScroll = () => {
         const offset = window.scrollY;
         if (offset > 100) {
@@ -62,11 +64,25 @@ const Landing = () => {
     useEffect(() => {
         const wow = new WOW.WOW();
         wow.init();
-      }, []);
-    const handleBuyNow = () =>{
-        /*code comming soon*/
-        return
-    }
+    }, []);
+
+    const [selectedOption, setSelectedOption] = useState('');
+
+    const handleOptionChange = (event) => {
+        console.log(event.target.value)
+        setSelectedOption(event.target.value);
+    };
+
+    const handlePurchase = (event) => {
+        try{
+            console.log(event)
+            event.preventDefault();
+            // Redirect to the checkout page with the selected option
+            history(`/checkout?selectedOption=${selectedOption}`);
+        }catch(err){
+            console.log(err.message)
+        }
+    };
     const check = (qty) =>{
         return
     }
@@ -129,7 +145,7 @@ const Landing = () => {
                         <h2>Pyrex Proxies</h2>
                         <h5> Pyrex Proxies offers an in-house solution with unmatched functionality. </h5>
                         <nav className="nav purchase_btn"> 
-                            <button className="button_zal" onClick={handleBuyNow}>Buy Now</button>
+                            <button className="button_zal" onClick={handlePurchase}>Buy Now</button>
                         </nav>
                     </div>
                 </div>
@@ -280,9 +296,9 @@ const Landing = () => {
                             <div id="London" className="w3-container city">
                                 <div className="row justify-content-center"> 
                                     <div className="col-lg-5 wow slideInDown" style={{ animationDuration: '1s' }}>
-                                    <div className="features_wraper"> 
+                                    <div className="features_wraper">
                                         <div className="logo_product">
-                                        <img src={logo} alt=""/>
+                                        <img src={logo} alt="" />
                                         </div>
                                         <h4>BASIC</h4>
                                         <h3> <span>$</span>5 Per Gb</h3>
@@ -291,105 +307,104 @@ const Landing = () => {
                                         <li> <i className="fa fa-check-circle" aria-hidden="true"></i>Footsites, Footlocker EU, Finishline, Yeezy Supply, Supreme, etc</li>
                                         <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Supporting all regions/countries with custom pools</li>
                                         <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Useful for restocks, raffles, email/account gen, & Yeezy Supply</li>
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> DATA NEVER EXPIRES!</li> 
-                                        </ul> 
-                                        <select> 
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        </select> 
-                                        <form onSubmit={() => check("3")} enctype='text/plain'>
+                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> DATA NEVER EXPIRES!</li>
+                                        </ul>
+                                        <select onChange={handleOptionChange}>
+                                        <option value={1}>$5 Per 1 GB</option>
+                                        <option value={2}>$10 Per 2 GB</option>
+                                        <option value={3}>$20 Per 4 GB</option>
+                                        <option value={4}>$50 Per 10 GB</option>
+                                        </select>
+                                        <form onSubmit={handlePurchase}>
                                         <div className="hiden_quantity">
-                                            <button className="button_zal" type="submit"><a href="a"> Purchase Now </a></button>
+                                            <button className="button_zal" type="submit">Purchase Now</button>
                                         </div>
                                         </form>
                                     </div>
-                                    </div> 
-                                    
+                                    </div>
                                     <div className="col-lg-5 wow slideInDown" style={{ animationDuration: '1s' }}>
-                                    <div className="features_wraper"> 
+                                    <div className="features_wraper">
                                         <div className="logo_product">
-                                        <img src={logo} alt=""/>
+                                        <img src={logo} alt="" />
                                         </div>
                                         <h4>STANDARD</h4>
                                         <h3> <span>$</span>12 Per Gb</h3>
                                         <ul>
-                                        <li><i className="fa fa-check-circle" aria-hidden="true"></i>Extremely stable and reliable with a 99.99% uptime</li>
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i>72M+ ethically sourced IPs</li>
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Good for Footsites, Yeezy Supply, Shopify PP, Supreme, etc</li>
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> DATA NEVER EXPIRES!</li> 
+                                        <li><i className="fa fa-check-circle" aria-hidden="true"></i> Private network with 7M+ residential IPs</li>
+                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i>Footsites, Footlocker EU, Finishline, Yeezy Supply, Supreme, etc</li>
+                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Supporting all regions/countries with custom pools</li>
+                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Useful for restocks, raffles, email/account gen, & Yeezy Supply</li>
+                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> DATA NEVER EXPIRES!</li>
                                         </ul>
-                                        <select> 
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        </select> 
-                                        <form onSubmit={() => check("3")} enctype='text/plain'>
+                                        <select onChange={handleOptionChange}>
+                                        <option>$12 Per 1 GB</option>
+                                        <option>$24 Per 2 GB</option>
+                                        <option>$48 Per 4 GB</option>
+                                        <option>$120 Per 10 GB</option>
+                                        </select>
+                                        <form onSubmit={handlePurchase} enctype='text/plain'>
                                         <div className="hiden_quantity">
-                                            <button className="button_zal" type="submit"><a href="a"> Purchase Now </a></button>
+                                            <button className="button_zal" type="submit">Purchase Now</button>
                                         </div>
                                         </form>
                                     </div>
-                                    </div> 
-                                    
+                                    </div>
                                     <div className="col-lg-5 wow slideInDown" style={{ animationDuration: '1s' }}>
-                                    <div className="features_wraper"> 
-                                        <div className="logo_product">
-                                        <img src={logo} alt=""/>
+                                        <div className="features_wraper">
+                                            <div className="logo_product">
+                                            <img src={logo} alt="" />
+                                            </div>
+                                            <h4>PREMIUM</h4>
+                                            <h3> <span>$</span>15 Per Gb</h3>
+                                            <ul>
+                                            <li><i className="fa fa-check-circle" aria-hidden="true"></i> Private network with 7M+ residential IPs</li>
+                                            <li> <i className="fa fa-check-circle" aria-hidden="true"></i>Footsites, Footlocker EU, Finishline, Yeezy Supply, Supreme, etc</li>
+                                            <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Supporting all regions/countries with custom pools</li>
+                                            <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Useful for restocks, raffles, email/account gen, & Yeezy Supply</li>
+                                            <li> <i className="fa fa-check-circle" aria-hidden="true"></i> DATA NEVER EXPIRES!</li>
+                                            </ul>
+                                            <select onChange={handleOptionChange}>
+                                            <option>$15 Per 1 GB</option>
+                                            <option>$30 Per 2 GB</option>
+                                            <option>$60 Per 4 GB</option>
+                                            <option>$150 Per 10 GB</option>
+                                            </select>
+                                            <form onSubmit={handlePurchase} enctype='text/plain'>
+                                            <div className="hiden_quantity">
+                                                <button className="button_zal" type="submit">Purchase Now</button>
+                                            </div>
+                                            </form>
                                         </div>
-                                        <h4>PREMIUM</h4>
-                                        <h3> <span>$</span>15 Per Gb</h3>
-                                        <ul>
-                                        <li><i className="fa fa-check-circle" aria-hidden="true"></i>Low-key provider with great performance</li>
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i>40M+ real device IPs</li>
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Great for Footsites, Yeezy Supply, Shopify PP, Supreme, etc</li> 
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> DATA NEVER EXPIRES!</li> 
-                                        </ul>
-                                        <select> 
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        </select> 
-                                        <form onSubmit={() => check("3")} enctype='text/plain'>
-                                        <div className="hiden_quantity">
-                                            <button className="button_zal" type="submit"><a href="a"> Purchase Now </a></button>
-                                        </div>
-                                        </form>
                                     </div>
-                                    </div> 
-                                    
                                     <div className="col-lg-5 wow slideInDown" style={{ animationDuration: '1s' }}>
                                     <div className="features_wraper">
                                         <div className="logo_product">
-                                        <img src={logo} alt=""/>
+                                        <img src={logo} alt="" />
                                         </div>
                                         <h4>ELITE</h4>
                                         <h3> <span>$</span>18 Per Gb</h3>
                                         <ul>
-                                        <li><i className="fa fa-check-circle" aria-hidden="true"></i> Industry Standard for Highest Quality</li>
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i>100M+ ethically sourced IPs</li>
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Perfect for Footsites, Yeezy Supply, Shopify PP, Supreme, etc</li> 
-                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> DATA NEVER EXPIRES!</li> 
+                                        <li><i className="fa fa-check-circle" aria-hidden="true"></i> Private network with 7M+ residential IPs</li>
+                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i>Footsites, Footlocker EU, Finishline, Yeezy Supply, Supreme, etc</li>
+                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Supporting all regions/countries with custom pools</li>
+                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> Useful for restocks, raffles, email/account gen, & Yeezy Supply</li>
+                                        <li> <i className="fa fa-check-circle" aria-hidden="true"></i> DATA NEVER EXPIRES!</li>
                                         </ul>
-                                        <select> 
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        <option>$5 Per 1 GB  </option>
-                                        </select> 
-                                        <form onSubmit={() => check("3")} enctype='text/plain'>
+                                        <select onChange={handleOptionChange}>
+                                        <option>$18 Per 1 GB</option>
+                                        <option>$36 Per 2 GB</option>
+                                        <option>$72 Per 4 GB</option>
+                                        <option>$180 Per 10 GB</option>
+                                        </select>
+                                        <form onSubmit={handlePurchase} enctype='text/plain'>
                                         <div className="hiden_quantity">
-                                            <button className="button_zal" type="submit"><a href="a"> Purchase Now </a></button>
+                                            <button className="button_zal" type="submit">Purchase Now</button>
                                         </div>
                                         </form>
                                     </div>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
-                            
                             <div id="Paris" className="w3-container city displayNo">
                             <div className="row justify-content-center"> 
                                 <div className="col-lg-5 wow slideInDown" style={{animationDuration: '1s'}}>

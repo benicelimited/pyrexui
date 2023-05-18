@@ -12,7 +12,9 @@ function PurchaseSection() {
   const handlePyrexQuantityChange = (event) => {
     setPyrexQuantity(Number(event.target.value));
   };
-
+  const handleClick = () =>{
+    
+  }
 
   return (
     <div className="box-iner">
