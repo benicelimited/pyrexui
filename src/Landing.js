@@ -75,6 +75,9 @@ const Landing = () => {
 
     const handlePurchase = (event) => {
         try{
+            if(selectedOption == ''){
+                selectedOption = 1
+            }
             console.log(event)
             event.preventDefault();
             // Redirect to the checkout page with the selected option
