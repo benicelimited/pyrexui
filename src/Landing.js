@@ -75,13 +75,15 @@ const Landing = () => {
 
     const handlePurchase = (event) => {
         try{
-            if(selectedOption == ''){
-                selectedOption = 1
-            }
             console.log(event)
             event.preventDefault();
-            // Redirect to the checkout page with the selected option
-            history(`/checkout?selectedOption=${selectedOption}`);
+            if(selectedOption == ''){
+              setSelectedOption(1)
+                history(`/checkout?selectedOption=${selectedOption}`);
+            }else{
+                 // Redirect to the checkout page with the selected option
+                history(`/checkout?selectedOption=${selectedOption}`);
+            }
         }catch(err){
             console.log(err.message)
         }
