@@ -39,7 +39,9 @@ const Checkout = () => {
 
   // Get the product information
   const productInfo = getProductInfo();
-
+  const handleReturnClick = () => {
+    window.history.back();
+  };
 
   useEffect(() => {
     document.title = 'Pyrex Proxies | Checkout';
@@ -176,9 +178,11 @@ const Checkout = () => {
                                         <div className="left-text">Total </div>
                                         <div className="right-value"> {productInfo.price + 12}</div>
                                     </div>
-                                    <div className="margin-bottom-15 margin-top-30 text-center">
-                                        <button className="blue-button border-radius-5 margin-auto font-size-13 font-weight-600">Pay Now </button>
+                                    <div className="margin-bottom-15 margin-top-30 text-center" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <button className="blue-button border-radius-5 font-size-13 font-weight-600">Pay Now</button>
+                                    <button className="blue-button border-radius-5 font-size-13 font-weight-600" onClick={handleReturnClick}>Return</button>
                                     </div>
+
                                 </div>
                             </div> 
                         </div>

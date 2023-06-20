@@ -28,7 +28,6 @@ import DiscordAuthButton from './DiscordOauth';
 import { Particles } from "react-tsparticles";
 import { loadFull } from 'tsparticles';
 import WOW from 'wowjs';
-import { Link } from 'react-scroll';
 
 
 
@@ -66,24 +65,21 @@ const Landing = () => {
         wow.init();
     }, []);
 
-    const [selectedOption, setSelectedOption] = useState('');
+    const [selectedOption, setSelectedOption] = useState(1);
 
     const handleOptionChange = (event) => {
         console.log(event.target.value)
         setSelectedOption(event.target.value);
     };
-
+    const handleRefundPolicyClick = () => {
+        history("/refund-policy"); // Replace with the actual URL of your refund policy page
+      };
     const handlePurchase = (event) => {
         try{
             console.log(event)
             event.preventDefault();
-            if(selectedOption == ''){
-              setSelectedOption(1)
-                history(`/checkout?selectedOption=${selectedOption}`);
-            }else{
-                 // Redirect to the checkout page with the selected option
-                history(`/checkout?selectedOption=${selectedOption}`);
-            }
+            history(`/checkout?selectedOption=${selectedOption}`);
+            
         }catch(err){
             console.log(err.message)
         }
@@ -91,7 +87,9 @@ const Landing = () => {
     const check = (qty) =>{
         return
     }
-  
+    const buyNow = () => {
+        window.location.href = '#pricing';
+      };
     const openCity = (evt, cityName) => {
       let i, x, tablinks;
     
@@ -150,7 +148,7 @@ const Landing = () => {
                         <h2>Pyrex Proxies</h2>
                         <h5> Pyrex Proxies offers an in-house solution with unmatched functionality. </h5>
                         <nav className="nav purchase_btn"> 
-                            <button className="button_zal" onClick={()=>{}}>Buy Now</button>
+                            <button className="button_zal" onClick={buyNow}>Buy Now</button>
                         </nav>
                     </div>
                 </div>
@@ -619,7 +617,7 @@ const Landing = () => {
                                 <ul>
                                 <li><i className="bx bx-chevron-right"></i> <a href="terms.html">Terms of Service </a></li>
                                 <li><i className="bx bx-chevron-right"></i> <a href="privacy.html">Privacy &amp; Policy </a></li> 
-                                <li><i className="bx bx-chevron-right"></i> <a href="privacy.html">Refund Policy </a></li> 
+                                <li><i className="bx bx-chevron-right"></i> <a href="#" onClick={handleRefundPolicyClick}>Refund Policy</a></li>
                                 </ul>
                             </div>
 

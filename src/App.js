@@ -7,6 +7,7 @@ import ResidentialPage from './ResidentialPage'
 import IspPage from './IspPage'
 import Auth from './Auth';
 import Checkout from './Checkout';
+import RefundPolicy from './Refund';
 
 function App() {
   ReactSession.setStoreType("localStorage");
@@ -19,6 +20,7 @@ function App() {
         <Route path="/resi" element={<ResidentialPage />} />
         <Route path="/isp" element={<IspPage />} />
         <Route path='/checkout' element={<Checkout />} />
+        <Route path='/refund-policy' element={<RefundPolicy />} />
         </Routes>
       </Router>
   );
