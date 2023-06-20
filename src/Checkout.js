@@ -156,13 +156,13 @@ const Checkout = () => {
                                 <div className="order-details"> 
                                     <h5> Order Details </h5>
                                     <div className="flex">
-                                        <div className="left-text">Subtotal </div>
-                                        <div className="right-value"> {productInfo.price}</div>
+                                        <div className="left-text">Subtotal: </div>
+                                        <div className="right-value"> ${productInfo.price}</div>
                                     </div>
 
                                     <div className="flex">
-                                        <div className="left-text">Tax </div>
-                                        <div className="right-value"> $12</div>
+                                        <div className="left-text">Tax: </div>
+                                        <div className="right-value">$12</div>
                                     </div>
                                     <div className="horizontal-line"> </div>
                                     <div className="flex margin-bottom-15">
@@ -175,8 +175,8 @@ const Checkout = () => {
                                 </div>
                                 
                                     <div className="flex">
-                                        <div className="left-text">Total </div>
-                                        <div className="right-value"> {productInfo.price + 12}</div>
+                                        <div className="left-text">Total: </div>
+                                        <div className="right-value"> ${productInfo.price + 12}</div>
                                     </div>
                                     <div className="margin-bottom-15 margin-top-30 text-center" style={{ display: 'flex', justifyContent: 'space-between' }}>
                                     <button className="blue-button border-radius-5 font-size-13 font-weight-600">Pay Now</button>
